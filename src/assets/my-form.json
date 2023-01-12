@@ -1,0 +1,41 @@
+{
+    "controls": [
+        {
+            "name": "firstName",
+            "label": "First Name:",
+            "value": "",
+            "type": "text",
+            "validators": {
+                "required": true,
+                "minLength": 5
+            }
+        },
+        {
+            "name": "lastName",
+            "label": "Last Name:",
+            "value": "",
+            "type": "text",
+            "validators": {
+                "required": true,
+                "minLength": 10
+            }
+        },
+        {
+            "name": "nickname",
+            "label": "Nickname:",
+            "value": "derp",
+            "type": "text",
+            "validators": {
+                "required": true,
+                "minLength": 10
+            }
+        },
+        {
+            "name": "terms",
+            "label": "Checkbox Example",
+            "value": "false",
+            "type": "checkbox",
+            "validators": {} 
+        }
+    ]
+}

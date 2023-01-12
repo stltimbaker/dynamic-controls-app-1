@@ -1,0 +1,25 @@
+<h3>My Form Component</h3>
+
+<form [formGroup]="myForm" (ngSubmit)="onSubmit()">
+    <div *ngFor="let control of formData?.controls">
+        <label [for]="control.name">{{ control.label }}</label>
+        <input 
+           [type]="control.type"
+           [formControlName]="control.name"
+           [value]="control.value"
+           [id]="control.name" />
+    </div>
+    <div>
+        <button type="submit">Submit</button>
+    </div>
+</form>
+
+<hr>
+<strong>Valid:</strong> {{ myForm.valid }} <br>
+<strong>Touched:</strong> {{ myForm.touched }} <br>
+<strong>Dirty:</strong> {{ myForm.dirty }}
+<pre>{{ myForm.value | json }}</pre>
+
+<hr>
+<br>
+<!-- <pre>{{ formData.controls | json }}</pre> -->
